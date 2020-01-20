@@ -1,0 +1,121 @@
+<?php
+session_start();
+?>
+<html>
+<body>
+	<table>
+			<tr>
+			<!temporary pic to be changed>
+				<td><img src="sports2.jpg" alt="picture of welcome" width="950" height="600"/></td>
+				<td>
+					<h1>Sign Up</h1>
+					<form name="myForm" method = "POST" action ="process.php" onsubmit="return check()">
+						<label>Full name</label>
+						<br/>
+						<input type="text" placeholder="Name" name="name"/>
+						
+						<br/><br/>
+						<label>Email</label>
+						<br/>
+						<input type="email" placeholder="Email adress" name="email"/>
+						<br/>
+						<br/>
+						<label>Username</label>
+						<br/>
+						<input type="text" placeholder="Username" name="username"/>		
+						<br/>
+						</br>
+						<label>Password</label>
+						<br/>
+						<input type="password" placeholder="*********" name="password"/>
+						<br/>
+						<br/>
+						<label>Repeat Password</label>
+						<br/>
+						<input type="password" placeholder="*********" name="repeatPassword"/>
+						<br/>
+						<br/>
+						<input type="checkbox" name="termofuser" value="agree" required/>
+						<label>I agree to the <b>Terms of User</b></label>
+						<br/>
+						<br/>
+						<input type="submit"  value="Sign Up"  /><!color to be added and shape>
+						<!img of arrow to be added and shape>
+						<input type="button" value="Sign in" name="Signin">
+						
+					</form>
+				</td>
+			</tr>
+		</table>
+		<?php
+			echo $_SESSION["name"];
+			if($_SESSION["name"]!=NULL)
+				echo "The username already exists .Please enter again";
+		?>
+</body>
+<script>
+	function check()
+	{
+		var name=document.forms["myForm"]["name"].value;
+		var email=document.forms["myForm"]["email"].value;
+		var username=document.forms["myForm"]["username"].value;
+		var password=document.forms["myForm"]["password"].value;
+		var repeatPassword=document.forms["myForm"]["repeatPassword"].value;
+		if(name=="")
+		{
+			alert("Please enter a name");
+			return false;
+		}
+		if(email=="")
+		{
+			alert("Please enter a email address");
+			return false;
+		}
+		if(username=="")
+		{
+			alert("Please enter a email address");
+			return false;
+		}
+		if(password=="")
+		{
+			alert("Please enter a password");
+			return false;
+		}
+		if(repeatPassword=="")
+		{
+			alert("Please re-enter your password");
+			return false;
+		}
+		var domain=["gmail.com","hotmail.com"]
+		var emailCheck=email.search("gmail");
+		var count=0;
+		for(var i=0;i<domain.length;i++)
+		{
+			if(email.search(domain[i])!=-1)
+				count=1;
+		}
+		if(count==0)
+		{
+			alert("Please enter a correct domain");
+			return false;
+		}
+		var psswrd=new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+		if(password.match(psswrd))
+		{
+			alert("password is valid!")
+		}
+		else
+		{
+			alert("The password must contain at least 1 uppercase character, 1 lowercase character, 1 digit, 1 special character and a minimum length of 8 characters.");
+			return false;
+		}
+		if(password!=repeatPassword)
+		{
+			alert("Both the passwords do not match");
+			return false;
+		}
+	}
+
+</script>
+
+</html>

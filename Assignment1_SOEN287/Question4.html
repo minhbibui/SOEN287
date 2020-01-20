@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QUESTION 4: Form</title>
+	<style type="text/css">
+		body {
+			background-color: yellow;
+			}	
+
+		#f1{
+			background-color: aqua;
+			border-color: navy;
+			border-width: 3px;
+			}
+		
+		#L1 {
+			color: navy;
+		}
+		#f2 
+		{
+			background-color: #DAF7A6;
+			border-color: green;
+			border-width: 3px;
+		}
+		#L2
+		{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<h1><a href="http://clipart-library.com/img/1121534.jpg"><img src="car.jpg" style="height: 50px;" width="100px;"></a> Car Dealership</h1>
+	<form>
+		<fieldset id="f1">
+	
+			<legend id="L1" ><h2>Customer Information</h2></legend>
+			<strong>Customer Name</strong><br>
+			<input type="text" name="firstname" value="First Name">
+			<input type="text" name="lastname" value="Last Name"> <br>
+			<br>
+			<strong>Customer Contact</strong>
+			<input type="text" name="number" value="XXX-XXX-XXXX"><br>
+			<br>
+			<strong>Email Address</strong>
+			<input type="text" name="email" value="email address"><br>
+			<br>
+		</fieldset>
+		<br>
+		<fieldset id="f2">
+			<legend id="L2"><h2>Car Information</h2></legend>
+			
+				<strong>Car Type:</strong>
+				<br>
+				<input type="radio" name="cartype" value="coupe">Coupe<br>
+				<input type="radio" name="cartype" value="sedan">Sedan<br>
+				<input type="radio" name="cartype" value="suv">SUV<br>
+				<br>
+
+				<strong>Features:</strong>
+				<br>
+				<input type="radio" name="features" value="rearviewcamera">Rear View Camera
+				<input type="radio" name="features" value="gps">GPS
+				<input type="radio" name="features" value="leatherseats">Leather Seats
+				<br>
+				<br>
+
+				<strong>Price Range:</strong>
+				<br>
+				Minimum Price: <input type="search" name="minimumprice">
+				Maximum Price: <input type="search" name="maximumprice"><br>
+				<br>
+
+				<strong>Car Color:</strong>
+				<br>
+				<input type="color" name="color">
+				<br>
+				<br>
+				<strong>Approximate Purchase Date:</strong>
+				<br>
+				<input type="date" name="purchasedate">
+				<br>
+		</fieldset>
+		<br>
+		<legend>Request a list of cars with quotes.</legend>
+		<br>
+		<input type="submit" name="search" value="Search">
+		<input type="submit" name="startover" value="Start Over">
+	</form>
+</body>
+</html>

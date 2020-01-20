@@ -1,0 +1,76 @@
+<!-- ----------------------------------------------------- -->
+<!-- Assignment 2 -->
+<!-- Written by: Minh Bui-40073498 -->
+<!-- For SOEN 287 Section CC- Summer 2019 -->
+<!-- ----------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Question1
+	</title>
+	<script type="text/javascript">
+			function validateNumber(isNumber)
+			{
+				if(isNaN(isNumber))
+				{
+					return false;
+				}
+				return true;
+			}
+			function isPrimeNumber(isPrime)
+			{
+				if(isPrime===1)
+				{
+					return false;
+				}
+				else if(isPrime===2)
+				{
+					return true;
+				}
+				else 
+				{
+					for(var i=2;i<isPrime;i++)
+					{
+						if(isPrime%i===0)
+						{
+							return false;
+						}
+					}
+					return true;
+				}
+			}
+			function reverseNumber(number)
+			{
+				number=number+"";
+				return number.split("").reverse().join("");
+			}
+	</script>
+</head>
+<body>
+	
+		<input type="text" name="number" id="num" placeholder="Enter your number">
+		<input type = "submit"  value = "Try it" onclick="run()" />
+	<script type="text/javascript">
+		function run(){
+		var number= document.getElementById('num').value;
+		if(validateNumber(number)==false)
+		{
+			alert("Please enter numeric value");
+		}
+		else
+		{
+			if(isPrimeNumber(number))
+			{
+				alert("This is a prime number and reverse is "+reverseNumber(number));
+			}
+			else
+			{
+				alert("This is not a prime number");
+			}
+
+		}
+	}
+	</script>
+</body>
+</html>

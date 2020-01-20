@@ -1,0 +1,48 @@
+<!-- ----------------------------------------------------- -->
+<!-- Assignment 2 -->
+<!-- Written by: Minh Bui-40073498 -->
+<!-- For SOEN 287 Section CC- Summer 2019 -->
+<!-- ----------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 4</title>
+	<script type="text/javascript">
+		function HideMe(input)
+		{
+			input= input.toLowerCase();
+			if(input.indexOf("soen287")!=-1|| input.indexOf("summer")!=-1 || input.indexOf("19")!=-1)
+			{
+				if(input.indexOf("soen287")!=-1)
+				{
+					input=input.replace("soen287","XXXXX");
+				}
+				if(input.indexOf("summer")!=-1)
+				{
+					input=input.replace("summer","XXXXX");
+				}
+				if(input.indexOf("19")!=-1)
+				{
+					input=input.replace("summer","XXXXX");
+				}
+				document.getElementById("output").innerHTML=input;
+			}
+			else
+			{
+				document.getElementById("output").innerHTML= "<mark>" + input +"</mark>";
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" name="inputString" id="result" placeholder="Input a string">
+	<input type="submit" value = "Try it" onclick="run()"/>
+	<script type="text/javascript">
+		function run(){
+		var inputString= document.getElementById("result").value; 
+		HideMe(inputString);
+	}
+	</script>
+	<p id="output"></p>
+</body>
+</html>

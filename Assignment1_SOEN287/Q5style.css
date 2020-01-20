@@ -1,0 +1,74 @@
+
+div {
+  background-color: rgb(255, 252, 206);
+  width: 35%;
+  padding: 25px;
+  border: 25px solid lightgrey;
+  margin: 25px;
+  color: grey;
+  }
+ table {
+   border: 18px solid blue;
+   border-style: dashed;
+   margin: 25px;
+   width: 650px;
+   }
+
+ th {
+   background-color: rgb(132, 127, 230);
+   color: white;
+   padding: 25px;
+ }
+
+ #cell1 {
+   background-color: rgb(241, 226, 253);
+   border: solid red;
+ }
+ ol.cell1 {
+    list-style-type: upper-roman;
+ }
+
+
+ #cell2 {
+   background-color: rgb(219, 246, 186);
+   border-style: solid;
+   border-color: rgb(140, 187, 116);
+ }
+ ol.cell2 {
+   list-style-type: upper-alpha;
+ }
+ ul.ball {
+   list-style-image: url("basketball.jpg");
+ }
+ ul.default {
+   list-style-image: none;
+ }
+ ul.item2 {
+   color: rgb(140, 187, 116); /*same color with the border of this cell */
+ }
+
+
+ #cell3 {
+   background-color: rgb(255, 255, 255);
+   border: solid purple;
+ }
+ ol.cell3 {
+   list-style-type: upper-roman;
+ }
+
+
+ #cell4 {
+   background-color: rgb(255, 251, 197);
+   border-style: solid;
+   border-color: orange;
+ }
+ ol.Hiragana {
+   list-style-type: hiragana;
+ }
+ ul.item1 {
+   list-style-type: square;
+   color: orange; /*same color with the border of this cell */
+ }
+ ul.simpson {
+   list-style-image: url("MaggieSimpson.png");
+ }

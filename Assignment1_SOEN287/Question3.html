@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QUESTION 3: Form</title>
+</head>
+<body>
+	<h1><img src="car.jpg" style="height: 50px;" width="100px;"> Car Dealership</h1>
+	<form>
+		<fieldset>
+			<legend>Customer Information</legend>
+			Customer Name<br>
+			<input type="text" name="firstname" value="First Name">
+			<input type="text" name="lastname" value="Last Name"> <br>
+			<br>
+			Customer Contact
+			<input type="text" name="number" value="XXX-XXX-XXXX"><br>
+			<br>
+			Email Address
+			<input type="text" name="email" value="email address"><br>
+			<br>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Car Information</legend>
+			
+				Car Type:<br>
+				<input type="radio" name="cartype" value="coupe">Coupe<br>
+				<input type="radio" name="cartype" value="sedan">Sedan<br>
+				<input type="radio" name="cartype" value="suv">SUV<br>
+				<br>
+
+				Features:<br>
+				<input type="radio" name="features" value="rearviewcamera">Rear View Camera
+				<input type="radio" name="features" value="gps">GPS
+				<input type="radio" name="features" value="leatherseats">Leather Seats
+				<br>
+				<br>
+				Price Range:<br>
+				Minimum Price: <input type="search" name="minimumprice">
+				Maximum Price: <input type="search" name="maximumprice"><br>
+				<br>
+
+				Car Color:<br>
+				<input type="color" name="color">
+				<br>
+				<br>
+				Approximate Purchase Date:<br>
+				<input type="date" name="purchasedate">
+				<br>
+		</fieldset>
+		<br>
+		<legend>Request a list of cars with quotes.</legend>
+		<br>
+		<input type="submit" name="search" value="Search">
+		<input type="submit" name="startover" value="Start Over">
+	</form>
+</body>
+</html>
